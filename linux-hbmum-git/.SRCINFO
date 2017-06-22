@@ -1,0 +1,49 @@
+pkgbase = linux-hbmum-git
+	pkgver = 4.11.6.r81.g49e22350ace8
+	pkgrel = 1
+	url = http://algo.ing.unimo.it
+	arch = x86_64
+	license = GPL2
+	makedepends = kmod
+	makedepends = inetutils
+	makedepends = bc
+	makedepends = libelf
+	options = !strip
+	source = git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable-rc.git#branch=linux-4.11.y
+	source = http://repo-ck.com/source/gcc_patch/enable_additional_cpu_optimizations_for_gcc_v4.9+_kernel_v3.15+.patch.gz
+	source = config.x86_64
+	source = 90-linux.hook
+	source = linux.preset
+	source = https://gitlab.com/tom81094/custom-patches/raw/master/bfq-mq/4.11-bfq-mq-20170617.patch
+	source = http://kerneldedup.org/download/uksm/0.1.2.6/uksm-0.1.2.6-for-v4.11.patch
+	source = http://ck.kolivas.org/patches/muqss/4.0/4.11/4.11-sched-MuQSS_156.patch
+	sha512sums = SKIP
+	sha512sums = 77d80d50d8c4323ed36fd2097ba9f6b49bb8d7cae59d32ffa76b309758a7e9f972d26fedd77046d88ce2691bb01a07909f8bdc34ba214414be3bc030ee31994d
+	sha512sums = 1b3ebcba29244aa5231e2d5d9dd9fd6e8a0cd2d91d452d6968a426daac070f577dd5e537dee46acc1a21cb73de26e5609a620b89167334c890c442acd78dbfc3
+	sha512sums = d6faa67f3ef40052152254ae43fee031365d0b1524aa0718b659eb75afc21a3f79ea8d62d66ea311a800109bed545bc8f79e8752319cd378eef2cbd3a09aba22
+	sha512sums = 2dc6b0ba8f7dbf19d2446c5c5f1823587de89f4e28e9595937dd51a87755099656f2acec50e3e2546ea633ad1bfd1c722e0c2b91eef1d609103d8abdc0a7cbaf
+	sha512sums = 38b1a85b18d9477ed33b2d0303376f29e8e24197ff01bdfade460c0c7d722366f0c83c457097c25f339320d6f850bd55c16e247d1451572899cb1e6d663c19bf
+	sha512sums = 6a4fc7d521e1e64df9fe94fabb0d7aff7dcd0199fce22cb30b56113a42b4edea02428128c16e408f3d316f922bd3e95dc51e96fba6eb6eff49bf164086b71faf
+	sha512sums = c019c495096956dee80b86cde9826347cc1646c646cfd076cf57778869745a0fcada1fc435a9136e07125cc6120e3d4167749e9ac8ee7d80c265b87b14fe4096
+
+pkgname = linux-hbmum-git-kernel
+	pkgdesc = Linux Kernel and modules with the BFQ-MQ scheduler. Fourth Gen Intel Core i3/i5/i7 optimized.
+	install = linux.install
+	groups = linux-hbmum-git
+	depends = coreutils
+	depends = linux-firmware
+	depends = mkinitcpio>=0.7
+	optdepends = crda: to set the correct wireless channels of your country
+	optdepends = modprobed-db: Keeps track of EVERY kernel module that has ever been probed - useful for those of us who make localmodconfig
+	backup = etc/mkinitcpio.d/linux-hbmum-git.preset
+
+pkgname = linux-hbmum-git-headers
+	pkgdesc = Header files and scripts to build modules for linux-hbmum-git. Fourth Gen Intel Core i3/i5/i7 optimized.
+	groups = linux-hbmum-git
+	depends = linux-hbmum-git-kernel
+
+pkgname = linux-hbmum-git-docs
+	pkgdesc = Kernel hackers manual - HTML documentation that comes with the linux-hbmum-git kernel. Fourth Gen Intel Core i3/i5/i7 optimized.
+	groups = linux-hbmum-git
+	depends = linux-hbmum-git-kernel
+
