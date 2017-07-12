@@ -45,7 +45,7 @@ _NUMAdisable=y
 # This PKGBUILD will call it directly to probe all the modules you have logged!
 #
 # More at this wiki page ---> https://wiki.archlinux.org/index.php/Modprobed_db
-_localmodcfg=
+_localmodcfg=y
 
 # Use the current kernel's .config file
 # Enabling this option will use the .config of the RUNNING kernel rather than
@@ -106,6 +106,7 @@ prepare() {
     ### Patch source with BFQ-MQ
         msg "Patching source with BFQ-MQ patches"
         patch -Np1 -i "${srcdir}/4.11-bfq-mq-20170617.patch"
+        patch -Np1 -i "${srcdir}/4.11-bfq-mq-update-to-v8r12.patch"
 
     ### UKSM ###
 	patch -Np1 -i "${srcdir}/uksm-0.1.2.6-for-v4.11.patch"
@@ -476,7 +477,7 @@ done
 
 sha512sums=('SKIP'
             '77d80d50d8c4323ed36fd2097ba9f6b49bb8d7cae59d32ffa76b309758a7e9f972d26fedd77046d88ce2691bb01a07909f8bdc34ba214414be3bc030ee31994d'
-            'c492e59d23193db5ac18f90c3cb0455fdb369a76d67aa181d26b25650105b08b123f65fe369c342b92d90ca092275398581204d6e678dd98bffceef69972e99a'
+            'a2d365d83fbd5d22799a1fd8518e8803af16b29cb603666fb0b20caac643ea0f7d03b0820fb9e54a3fd80dd961f8da84739669438ec450159532ba31de7b0a75'
             'd6faa67f3ef40052152254ae43fee031365d0b1524aa0718b659eb75afc21a3f79ea8d62d66ea311a800109bed545bc8f79e8752319cd378eef2cbd3a09aba22'
             '2dc6b0ba8f7dbf19d2446c5c5f1823587de89f4e28e9595937dd51a87755099656f2acec50e3e2546ea633ad1bfd1c722e0c2b91eef1d609103d8abdc0a7cbaf'
             '38b1a85b18d9477ed33b2d0303376f29e8e24197ff01bdfade460c0c7d722366f0c83c457097c25f339320d6f850bd55c16e247d1451572899cb1e6d663c19bf'
