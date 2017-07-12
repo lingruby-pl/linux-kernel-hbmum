@@ -1,5 +1,5 @@
 pkgbase = linux-hbmum-git
-	pkgver = 4.11.8.r0.g8afcfa55e6a7
+	pkgver = 4.11.10.r0.ge3d9e2b278ed
 	pkgrel = 1
 	url = http://algo.ing.unimo.it
 	arch = x86_64
@@ -15,14 +15,16 @@ pkgbase = linux-hbmum-git
 	source = 90-linux.hook
 	source = linux.preset
 	source = https://gitlab.com/tom81094/custom-patches/raw/master/bfq-mq/4.11-bfq-mq-20170617.patch
+	source = https://raw.githubusercontent.com/sirlucjan/lucjan-kernels/master/lucjan-kernels-unstable/linux-bfq-mq-haswell-git/4.11-bfq-mq-update-to-v8r12.patch
 	source = http://kerneldedup.org/download/uksm/0.1.2.6/uksm-0.1.2.6-for-v4.11.patch
 	source = http://ck.kolivas.org/patches/muqss/4.0/4.11/4.11-sched-MuQSS_156.patch
 	sha512sums = SKIP
 	sha512sums = 77d80d50d8c4323ed36fd2097ba9f6b49bb8d7cae59d32ffa76b309758a7e9f972d26fedd77046d88ce2691bb01a07909f8bdc34ba214414be3bc030ee31994d
-	sha512sums = 524a8e0cad1e97ccbc6b2946d7413b431fedb6eeb00795238774a3aa0804d2cc4dffc8249841fc170bd1897f0d2b20720e22daff0386b5f289b98d2c98d3e801
+	sha512sums = c492e59d23193db5ac18f90c3cb0455fdb369a76d67aa181d26b25650105b08b123f65fe369c342b92d90ca092275398581204d6e678dd98bffceef69972e99a
 	sha512sums = d6faa67f3ef40052152254ae43fee031365d0b1524aa0718b659eb75afc21a3f79ea8d62d66ea311a800109bed545bc8f79e8752319cd378eef2cbd3a09aba22
 	sha512sums = 2dc6b0ba8f7dbf19d2446c5c5f1823587de89f4e28e9595937dd51a87755099656f2acec50e3e2546ea633ad1bfd1c722e0c2b91eef1d609103d8abdc0a7cbaf
 	sha512sums = 38b1a85b18d9477ed33b2d0303376f29e8e24197ff01bdfade460c0c7d722366f0c83c457097c25f339320d6f850bd55c16e247d1451572899cb1e6d663c19bf
+	sha512sums = 2277183623a71ea296e33755a07910df9cb9df8ff8dade8ef5a12a92d8a789be136cbe268148f8c177337cdea7b0b312397a26f3a5b7f08b065051b8f6ce1735
 	sha512sums = 6a4fc7d521e1e64df9fe94fabb0d7aff7dcd0199fce22cb30b56113a42b4edea02428128c16e408f3d316f922bd3e95dc51e96fba6eb6eff49bf164086b71faf
 	sha512sums = c019c495096956dee80b86cde9826347cc1646c646cfd076cf57778869745a0fcada1fc435a9136e07125cc6120e3d4167749e9ac8ee7d80c265b87b14fe4096
 
